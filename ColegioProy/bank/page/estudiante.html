@@ -1,0 +1,92 @@
+<h1 style="color: white">
+  <i style="color: white" class="fa fa-user" aria-hidden="true"></i>
+  Estudiante: {{ estudiantes2.nombres }} {{ estudiantes2.apellidos }} 
+</h1>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">{{accion}} Estudiante</div>
+  <div class="panel-body">
+
+      <form class="form-horizontal" role="form" ng-submit="procesar()">
+
+        <div class="form-group" ng-hide="creando">
+          <label for="codigo" class="col-lg-2 control-label">Código</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="codigo"
+                   placeholder="Código" ng-model="estudiantes2.codigo" readonly="readonly" />
+          </div>
+        </div>     
+
+        <div class="form-group">
+          <label for="nombre" class="col-lg-2 control-label">Nombres</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="nombres"
+                   placeholder="Apellido paterno" ng-model="estudiantes2.nombres" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nombre" class="col-lg-2 control-label">Apellidos</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="apellidos"
+                   placeholder="Apellido materno" ng-model="estudiantes2.apellidos" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nombre" class="col-lg-2 control-label">Fecha</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="fecha"
+                   placeholder="Nombre" ng-model="estudiantes2.fecha" required />
+          </div>
+        </div>   
+
+        <div class="form-group">
+          <label for="nombre" class="col-lg-2 control-label">Distrito</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="distrito"
+                   placeholder="Ciudad" ng-model="estudiantes2.distrito" required />
+          </div>
+        </div> 
+
+        <div class="form-group">
+          <label for="nombre" class="col-lg-2 control-label">Ciudad</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="ciudad"
+                   placeholder="Dirección" ng-model="estudiantes2.ciudad" required />
+          </div>
+        </div>   
+        <div class="form-group">
+          <label for="nombre" class="col-lg-2 control-label">Telefono</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="telefono"
+                   placeholder="Dirección" ng-model="estudiantes2.telefono" required />
+          </div>
+        </div>  
+
+        <div class="btn-toolbar col-lg-12" align="center">
+
+          <button type="submit" class="btn btn-success">
+            <i class="fa fa-floppy-o"></i> Grabar
+          </button>
+
+          <button type="button" class="btn btn-danger" ng-click="eliminar()">
+            <i class="fa fa-trash"></i> Eliminar
+          </button>
+        
+        </div>      
+
+      </form>
+
+  </div>
+
+</div>
+
+
+<div class="alert alert-info" ng-show="sinError">
+  <strong>Info!</strong> {{mensaje}}
+</div>
+
+<div class="alert alert-danger" ng-show="hayError">
+  <strong>Danger!</strong> {{mensaje}}
+</div>

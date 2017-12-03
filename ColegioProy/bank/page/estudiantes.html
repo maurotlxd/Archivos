@@ -1,0 +1,74 @@
+<style>
+  input{
+    margin-bottom: 10px;
+
+  }
+  
+  
+  
+</style>
+<div style="margin-top: 70px;" class="panel panel-primary">
+  <div class="panel-heading">CRITERIO DE BUSQUEDA</div>
+  <div class="panel-body">
+    <form ng-submit="consultar()">
+
+      <div class="form-group">
+        <div class="col-sm-2">
+          <input ng-model="criterio.codigo" type="text" class="form-control" placeholder="Codigo">
+        </div>
+     
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-primary">Consultardd</button>
+        </div>
+      </div>
+      <div class="col-sm-2">
+          <a href="#!/estudiante/nuevo" class="btn btn-primary">
+            <i class="fa fa-user-plus"></i>
+            Nuevo Estudiante
+          </a>
+        </div>
+
+
+    </form>      
+  </div>
+</div>
+
+
+<!-- Resultado de la busqueda -->
+<br><br><br>
+<div class="panel panel-primary">
+  <div class="panel-heading">Datos del estudiante</div>
+
+  <div class="panel-body">
+    <table class="table table-bordered">
+
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>fecha</th>
+            <th>distrito</th>
+             <th>ciudad</th>
+              <th>telefono</th>
+              <th>Opcion</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="estudiante in estudiantes">
+            <td>{{estudiante.codigo }}</td>
+             <td>{{estudiante.nombres }}</td>
+            <td>{{estudiante.apellidos }}</td>
+             <td>{{estudiante.fecha }}</td>
+            <td>{{estudiante.distrito }}</td>
+            <td>{{estudiante.ciudad }}</td>
+            <td>{{estudiante.telefono }}</td>
+            <td><a href="#!/estudiante/{{estudiante.codigo}}">Editar</a>  </td>
+          </tr>
+        </tbody>
+
+    </table>
+  </div>
+<div>
+  

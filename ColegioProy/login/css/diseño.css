@@ -1,0 +1,38 @@
+body{
+	background-color: #181d25;
+}
+h1{
+	text-align: center;
+	color: white;
+}
+h2{
+	text-align: center;
+	color: white;
+
+}
+
+form{
+	background-color: #1e2834;
+	width: 450px;
+	height: 300px;
+	padding-top: 75px;
+	margin: 30px auto 0px auto;
+	border:solid 1px ;
+
+}
+
+ button{
+	
+	width: 250px;
+	margin-left: 5px;
+}
+td{
+	padding-left: 15px;
+}
+h5{
+	color: white;
+	font-weight: bold;
+}
+
+
+

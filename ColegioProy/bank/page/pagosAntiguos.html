@@ -1,0 +1,78 @@
+<style>
+  input{
+    margin-bottom: 10px;
+
+  }
+  
+  
+  
+</style>
+<div style="margin-top: 70px;" class="panel panel-primary">
+  <div class="panel-heading">CRITERIO DE BUSQUEDA</div>
+  <div class="panel-body">
+    <form ng-submit="consultar()">
+
+      <div class="form-group">
+        <div class="col-sm-2">
+          <input ng-model="criterio.codigo" type="text" class="form-control" placeholder="Codigo">
+        </div>
+     
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-primary">Ver Pagos</button>
+        </div>
+      </div>
+     
+
+
+    </form>      
+  </div>
+</div>
+
+
+<!-- Resultado de la busqueda -->
+<br><br><br>
+<div class="panel panel-primary">
+  <div class="panel-heading">Reporte General</div>
+
+  <div class="panel-body">
+    <table class="table table-bordered">
+
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>fecha</th>
+            <th>distrito</th>
+             <th>ciudad</th>
+              <th>telefono</th>
+              
+              
+              <th>PagoMatricula</th>
+              <th>monto</th>
+              <th>FechaMatricula</th>
+
+              
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="pago in pagosa">
+            <td>{{pago.codigo }}</td>
+             <td>{{pago.nombres }}</td>
+            <td>{{pago.apellidos }}</td>
+             <td>{{pago.fecha1 }}</td>
+            <td>{{pago.distrito }}</td>
+            <td>{{pago.ciudad }}</td>
+            <td>{{pago.telefono }}</td>
+            
+             <td>{{pago.pago }}</td>
+             <td>{{pago.monto}}</td>
+            <td>{{pago.fecha }}</td>
+            
+          </tr>
+        </tbody>
+
+    </table>
+  </div>
+<div>
