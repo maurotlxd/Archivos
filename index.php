@@ -23,7 +23,7 @@
 </div>
 
 <form method="post" class="fondoForm" id= "iniciar" name="iniciar" onsubmit="iniciarsesion(); return false">
-  <legend>Perro negro</legend>
+  <legend>Gatito</legend>
   <div class="form-group">
   <input type="text" class="form-control" placeholder="usuario" name="usuario" required>
   </div>
